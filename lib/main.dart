@@ -1,3 +1,4 @@
+import 'package:benimogretmenim/routes/routes.dart';
 import 'package:benimogretmenim/screens/splash/splash_screen.dart';
 import 'package:benimogretmenim/ui/helper/constants.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +23,9 @@ class MyApp extends StatelessWidget {
         ),
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: SplashScreen(),
+      // home: SplashScreen(),
+      initialRoute: SplashScreen.routeName,
+      routes: routes,
     );
   }
 }
