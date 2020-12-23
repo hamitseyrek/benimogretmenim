@@ -1,4 +1,4 @@
-import 'package:benimogretmenim/ui/helper/constants.dart';
+import 'package:benimogretmenim/ui/helper/color_helper.dart';
 import 'package:benimogretmenim/ui/helper/size_config.dart';
 import 'package:flutter/material.dart';
 
