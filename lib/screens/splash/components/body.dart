@@ -1,4 +1,4 @@
-import 'package:benimogretmenim/screens/sign/signin_screen.dart';
+import 'package:benimogretmenim/screens/sign_in/sign_in_screen.dart';
 import 'package:benimogretmenim/ui/helper/color_helper.dart';
 import 'package:benimogretmenim/ui/helper/size_config.dart';
 import 'package:benimogretmenim/ui/widgets/default_button.dart';
@@ -68,7 +68,7 @@ class _BodyState extends State<Body> {
                     DefaultButton(
                       text: "Devam et",
                       press: () {
-                        Navigator.pushNamed(context, SigninScreen.routeName);
+                        Navigator.pushNamed(context, SignInScreen.routeName);
                       },
                     ),
                     Spacer(),

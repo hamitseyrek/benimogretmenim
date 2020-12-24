@@ -1,42 +1,10 @@
+import 'package:benimogretmenim/ui/helper/color_helper.dart';
 import 'package:benimogretmenim/ui/helper/error_messages_helper.dart';
 import 'package:benimogretmenim/ui/helper/size_config.dart';
 import 'package:benimogretmenim/ui/widgets/custom_sufix_icon.dart';
 import 'package:benimogretmenim/ui/widgets/default_button.dart';
 import 'package:benimogretmenim/ui/widgets/form_error.dart';
 import 'package:flutter/material.dart';
-
-class Body extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: SizedBox(
-        width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: getProportionateScreenWidth(20),
-          ),
-          child: Column(
-            children: [
-              Text(
-                "Hoş Geldiniz",
-                style: TextStyle(
-                  color: Colors.black,
-                  fontSize: getProportionateScreenWidth(28),
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-              Text(
-                "Litfen mail adresiniz ve şifreniz \nile giriş açınız.",
-                textAlign: TextAlign.center,
-              ),
-              SignForm(),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
 
 class SignForm extends StatefulWidget {
   @override
@@ -48,6 +16,7 @@ class _SignFormState extends State<SignForm> {
   String email;
   String password;
   final List<String> errors = [];
+  bool remember = false;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -55,11 +24,30 @@ class _SignFormState extends State<SignForm> {
       child: Column(
         children: [
           buildEmailFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          SizedBox(height: getProportionateScreenHeight(30)),
           buildPasswordFormField(),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          SizedBox(height: getProportionateScreenHeight(30)),
+          Row(
+            children: [
+              Checkbox(
+                value: remember,
+                activeColor: kPrimaryColor,
+                onChanged: (value) {
+                  setState(() {
+                    remember = value;
+                  });
+                },
+              ),
+              Text("Beni Hatırla"),
+              Spacer(),
+              Text(
+                "Şifremi Unuttum",
+                style: TextStyle(decoration: TextDecoration.underline),
+              ),
+            ],
+          ),
           FormError(errors: errors),
-          SizedBox(height: getProportionateScreenHeight(20)),
+          SizedBox(height: getProportionateScreenHeight(30)),
           DefaultButton(
             text: "Giriş",
             press: () {

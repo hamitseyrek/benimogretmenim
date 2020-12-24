@@ -1,7 +1,7 @@
-import 'package:benimogretmenim/screens/sign/components/body.dart';
+import 'package:benimogretmenim/screens/sign_in/components/body.dart';
 import 'package:flutter/material.dart';
 
-class SigninScreen extends StatelessWidget {
+class SignInScreen extends StatelessWidget {
   static String routeName = "/signin";
   @override
   Widget build(BuildContext context) {
