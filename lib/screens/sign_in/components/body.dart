@@ -1,7 +1,7 @@
-import 'package:benimogretmenim/ui/helper/color_helper.dart';
+import '../../../ui/widgets/no_account_text.dart';
 
 import '../components/sign_form.dart';
-import '../components/social_card.dart';
+import '../../../ui/widgets/social_card.dart';
 import '../../../ui/helper/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -53,22 +53,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(30)),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      "Bir hesabın yok mu? ",
-                      style:
-                          TextStyle(fontSize: getProportionateScreenWidth(16)),
-                    ),
-                    Text(
-                      "Hesap Oluştur",
-                      style: TextStyle(
-                          fontSize: getProportionateScreenWidth(16),
-                          color: kPrimaryColor),
-                    ),
-                  ],
-                )
+                NoAccountText()
               ],
             ),
           ),
