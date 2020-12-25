@@ -1,9 +1,7 @@
+import 'package:benimogretmenim/screens/sign_in/components/sign_form.dart';
 import 'package:benimogretmenim/ui/styles/heading_style.dart';
-
-import '../../../ui/widgets/no_account_text.dart';
-
-import '../components/sign_form.dart';
-import '../../../ui/widgets/social_card.dart';
+import 'package:benimogretmenim/ui/widgets/no_account_text.dart';
+import 'package:benimogretmenim/ui/widgets/social_card.dart';
 import '../../../ui/helper/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +23,6 @@ class Body extends StatelessWidget {
                 Text(
                   "Hoş Geldiniz",
                   style: headingStyle(),
-                  ),
                 ),
                 Text(
                   "Litfen mail adresiniz ve şifreniz \nile giriş açınız.",
