@@ -1,3 +1,5 @@
+import 'package:benimogretmenim/ui/styles/heading_style.dart';
+
 import '../../../ui/widgets/no_account_text.dart';
 
 import '../components/sign_form.dart';
@@ -22,10 +24,7 @@ class Body extends StatelessWidget {
                 SizedBox(height: SizeConfig.screenHeight * 0.04),
                 Text(
                   "Hoş Geldiniz",
-                  style: TextStyle(
-                    color: Colors.black,
-                    fontSize: getProportionateScreenWidth(28),
-                    fontWeight: FontWeight.bold,
+                  style: headingStyle(),
                   ),
                 ),
                 Text(
@@ -53,7 +52,7 @@ class Body extends StatelessWidget {
                   ],
                 ),
                 SizedBox(height: getProportionateScreenHeight(30)),
-                NoAccountText()
+                NoAccountText(),
               ],
             ),
           ),

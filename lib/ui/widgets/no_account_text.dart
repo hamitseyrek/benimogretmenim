@@ -1,6 +1,6 @@
-import 'package:benimogretmenim/screens/forgot_password/forgot_password_screen.dart';
-import 'package:benimogretmenim/ui/helper/color_helper.dart';
-import 'package:benimogretmenim/ui/helper/size_config.dart';
+import '../../screens/sign_up/sign_up_screen.dart';
+import '../../ui/helper/color_helper.dart';
+import '../../ui/helper/size_config.dart';
 import 'package:flutter/material.dart';
 
 class NoAccountText extends StatelessWidget {
@@ -18,7 +18,7 @@ class NoAccountText extends StatelessWidget {
           style: TextStyle(fontSize: getProportionateScreenWidth(16)),
         ),
         GestureDetector(
-          onTap: () {},
+          onTap: () => Navigator.pushNamed(context, SignUpScreen.routeName),
           child: Text(
             "Hesap Oluştur",
             style: TextStyle(
